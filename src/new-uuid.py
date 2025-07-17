@@ -33,25 +33,23 @@ def uuid5_sha1(namespace, name):
 
 def main():
     parser = argparse.ArgumentParser(description="Generate a UUIDv5 (SHA-1) from file or string content.")
-    parser.add_argument('--FilePath', type=str, default=None, help='Path to input file')
-    parser.add_argument('--Content', type=str, default=None, help='String content')
-    parser.add_argument('--Context', type=str, default='6ba7b810-9dad-11d1-80b4-00c04fd430c8', help='Namespace UUID (default: ns:DNS)')
+    parser.add_argument('--path', type=str, default=None, help='Path to input file')
+    parser.add_argument('--content', type=str, default=None, help='String content')
+    parser.add_argument('--context', type=str, default='6ba7b810-9dad-11d1-80b4-00c04fd430c8', help='Namespace UUID (default: ns:DNS)')
     args = parser.parse_args()
 
     try:
-        content = read_content(args.FilePath, args.Content)
+        content = read_content(args.path, args.content)
     except Exception as e:
         print(e, file=sys.stderr)
         sys.exit(1)
 
     try:
-        context_uuid = uuid.UUID(args.Context)
+        context_uuid = uuid.UUID(args.context)
     except Exception:
-        print(f"Invalid context UUID: {args.Context}", file=sys.stderr)
+        print(f"Invalid context UUID: {args.context}", file=sys.stderr)
         sys.exit(1)
 
-    print(f"Length of content bytes: {len(content.encode('utf-8'))}")
-    print(f"Content bytes: {'-'.join(f'{b:02X}' for b in content.encode('utf-8'))}")
     print(f"Using context GUID: {context_uuid}")
 
     result_uuid = uuid5_sha1(context_uuid, content)
