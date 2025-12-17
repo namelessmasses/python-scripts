@@ -15,15 +15,26 @@ def read_content(file_path, content):
     else:
         raise ValueError("Either file_path or content must be provided.")
 
+def uuid5_digest(namespace, name, digest=hashlib.sha1):
+    # namespace: uuid.UUID object
+    # name: string
+    name_bytes = name.encode('utf-8')
+    ns_bytes = namespace.bytes
+    # Per RFC 4122, namespace bytes must be in network order (big-endian)
+    hash_bytes = digest(ns_bytes + name_bytes).digest()
+    # Take the first 16 bytes
+    uuid_bytes = bytearray(hash_bytes[:16])
+    # Set version to 5
+    uuid_bytes[6] = (uuid_bytes[6] & 0x0F) | 0x50
+    # Set variant to RFC 4122
+    uuid_bytes[8] = (uuid_bytes[8] & 0x3F) | 0x80
+    return uuid.UUID(bytes=bytes(uuid_bytes))
+
 def uuid5_sha1(namespace, name):
     # namespace: uuid.UUID object
     # name: string
     # Implements RFC 4122, version 5 UUID (SHA-1)
-    name_bytes = name.encode('utf-8')
-    ns_bytes = namespace.bytes
-    # Per RFC 4122, namespace bytes must be in network order (big-endian)
-    hash_bytes = hashlib.sha1(ns_bytes + name_bytes).digest()
-    # Take the first 16 bytes
+    return uuid5_digest(namespace, name, digest=hashlib.sha1)
     uuid_bytes = bytearray(hash_bytes[:16])
     # Set version to 5
     uuid_bytes[6] = (uuid_bytes[6] & 0x0F) | 0x50

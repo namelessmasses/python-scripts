@@ -1,0 +1,79 @@
+to_address,from_address,valid_from_utc,valid_to_utc
+{
+    "to_address": {"S": "1bd179c7-ecb0-5b2a-8a98-896e01f2161f@namelessmasses.com"},
+    "from_address": {"S": "cigna.com"},
+    "valid_from_utc": {"N": "1762128000"},
+    "valid_to_utc": {"N": "253402300800"}
+}
+{
+    "to_address": {"S": "40a45c55-a2ab-5981-9741-10327ddddabd@namelessmasses.com"},
+    "from_address": {"S": "oakley.com"},
+    "valid_from_utc": {"N": "1762128000"},
+    "valid_to_utc": {"N": "253402300800"}
+}
+{
+    "to_address": {"S": "7498e48d-65c5-57da-b5d8-94fc2509786b@namelessmasses.com"},
+    "from_address": {"S": "anceltech.com"},
+    "valid_from_utc": {"N": "1762128000"},
+    "valid_to_utc": {"N": "253402300800"}
+}
+{
+    "to_address": {"S": "f90c0f04-3c4f-519d-8ac0-e70a38176f74@namelessmasses.com"},
+    "from_address": {"S": "framesdirect.com"},
+    "valid_from_utc": {"N": "1762128000"},
+    "valid_to_utc": {"N": "253402300800"}
+}
+{
+    "to_address": {"S": "c20184ce-a86d-5edd-b61c-e15e42959d09@namelessmasses.com"},
+    "from_address": {"S": "rayban.com"},
+    "valid_from_utc": {"N": "1762128000"},
+    "valid_to_utc": {"N": "253402300800"}
+}
+{
+    "to_address": {"S": "5f3af7ee-6eb0-5cd9-abdb-9fde22c84ab5@namelessmasses.com"},
+    "from_address": {"S": "glasses.com"},
+    "valid_from_utc": {"N": "1762214400"},
+    "valid_to_utc": {"N": "253402300800"}
+}
+{
+    "to_address": {"S": "ecd2db0e-4fe5-5ae9-b7e5-1a62844b96c7@namelessmasses.com"},
+    "from_address": {"S": "lenscrafters.com"},
+    "valid_from_utc": {"N": "1762214400"},
+    "valid_to_utc": {"N": "253402300800"}
+}
+{
+    "to_address": {"S": "86b5f67f-381e-5e5a-a98e-ce43b75267ac@namelessmasses.com"},
+    "from_address": {"S": "oempartsonline.com"},
+    "valid_from_utc": {"N": "1763164800"},
+    "valid_to_utc": {"N": "253402300800"}
+}
+{
+    "to_address": {"S": "ced92a3f-ffff-5a05-b1ae-1fa4f6ec5c25@namelessmasses.com"},
+    "from_address": {"S": "canvas3dapp.com"},
+    "valid_from_utc": {"N": "1763164800"},
+    "valid_to_utc": {"N": "253402300800"}
+}
+{
+    "to_address": {"S": "127a6071-3a81-59d3-b6c7-2e3622a6572a@namelessmasses.com"},
+    "from_address": {"S": "dolanrenotoyota.com"},
+    "valid_from_utc": {"N": "1764115200"},
+    "valid_to_utc": {"N": "253402300800"}
+}
+{
+    "to_address": {"S": "e6768f01-4009-5678-a4c6-979396f550a7@namelessmasses.com"},
+    "from_address": {"S": "toyotapartsdeal.com"},
+    "valid_from_utc": {"N": "1764806400"},
+    "valid_to_utc": {"N": "253402300800"}
+}
+{
+    "to_address": {"S": "060fe96f@namelessmasses.com"},
+    "from_address": {"S": "napaonline.com"},
+    "valid_from_utc": {"N": "1765065600"},
+    "valid_to_utc": {"N": "253402300800"}
+}
+{
+    "to_address": {"S": "bb22beaf@namelessmasses.com"},
+    "from_address": {"S": "summitracing.com"},
+    "valid_from_utc": {"N": "1765152000"},
+    "valid_to_utc": {"N": "253402300800"}
+}
